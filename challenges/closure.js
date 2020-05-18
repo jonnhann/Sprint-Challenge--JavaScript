@@ -18,7 +18,19 @@ myFunction();
 
 // Explanation: 
 
+//nestedFunction can access variable internal because nesterFunction is declared within myFunction. And because myFunction has declared variable internal outside of nestedFunction, nestedFunction has access to the variable.
 
 /* Task 2: Counter */
 
-/* Create a function called `sumation` that accepts a parameter and uses a counter to return the summation of that number. For example, `summation(4)` should return 10 because 1+2+3+4 is 10. */
+/* Create a function called `sumation` that accepts a parameter and uses a counter to return the summation of that number. 
+For example, `summation(4)` should return 10 because 1+2+3+4 is 10. */
+
+function sumation(num){
+  let counter = 0;
+  return function(){
+    for(num; num>0; num--){
+      counter = counter + num;
+    }
+    return counter;
+  }
+}
